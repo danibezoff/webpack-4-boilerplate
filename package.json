@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "node --use_strict node_modules/.bin/jest --verbose",
+    "test:debug": "node --use_strict --inspect-brk node_modules/.bin/jest",
     "start": "webpack-dev-server --env development",
     "build": "webpack --env production",
     "build:stats": "webpack --env production --json > stats.json",
@@ -13,7 +14,11 @@
   "jest": {
     "moduleNameMapper": {
       "\\.(jpe?g|png|gif|svg|eot|ttf|woff2?|(c|sa)ss)$": "<rootDir>/dummy-mock.js"
-    }
+    },
+    "modulePaths": [
+      "src",
+      "node_modules"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.54",

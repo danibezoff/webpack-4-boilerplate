@@ -11,9 +11,15 @@ const PATHS = {
 const commonConfig = merge(
   parts.clean(),
   {
+    resolve: {
+      modules: [
+        PATHS.app,
+        'node_modules'
+      ]
+    },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'Webpack 4 boilerplate'
+        template: 'src/index.html'
       })
     ]
   },
