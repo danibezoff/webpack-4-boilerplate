@@ -94,7 +94,7 @@ exports.extractCss = () => ({
   module: {
     rules: [
       {
-        test: /\.(s|sa)ss$/,
+        test: /\.(c|sa)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
           {

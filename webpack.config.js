@@ -43,7 +43,7 @@ const prodConfig = merge(
   },
   parts.extractCss(),
   parts.purifyCss({
-    paths: glob.sync(`${PATHS.app}/**/*.js`, { nodir: true })
+    paths: glob.sync(`${PATHS.app}/**/*`, { nodir: true })
   }),
   parts.transpileJs(),
   parts.minifyJs(),
